@@ -25,6 +25,7 @@ public class FuctionalityTest {
         //dumpsys window windows | grep -E 'mCurrentFocus | mFocusedApp'
         //com.android.dialer
         //com.android.dialer/.app.DialtactsActivity
+
         cap.setCapability("appPackage","com.android.dialer");
         cap.setCapability("appActivity","com.android.dialer.DialtactsActivity");
 
@@ -40,24 +41,26 @@ public class FuctionalityTest {
 //        AndroidElement androidElement = (AndroidElement) driver.findElementById("com.android.dialer:id/floating_action_button");
 //        touchAction.tap(TapOptions.tapOptions().withElement(ElementOption.element(androidElement))).perform();
 
-        String[] numpad = {
-                "com.android.dialer:id/zero",
-                "com.android.dialer:id/one",
-                "com.android.dialer:id/two",
-                "com.android.dialer:id/three",
-                "com.android.dialer:id/four",
-                "com.android.dialer:id/five",
-                "com.android.dialer:id/six",
-                "com.android.dialer:id/seven",
-                "com.android.dialer:id/eight",
-                "com.android.dialer:id/nine"};
+//        String[] numpad =
+//                {
+//                "com.android.dialer:id/zero",
+//                "com.android.dialer:id/one",
+//                "com.android.dialer:id/two",
+//                "com.android.dialer:id/three",
+//                "com.android.dialer:id/four",
+//                "com.android.dialer:id/five",
+//                "com.android.dialer:id/six",
+//                "com.android.dialer:id/seven",
+//                "com.android.dialer:id/eight",
+//                "com.android.dialer:id/nine"
+//                };
 
-        for(String num:numpad){
-            touchAction.tap(TapOptions.tapOptions()
-                    .withElement(ElementOption.element(driver.findElement(By
-                            .id(num)))))
-                    .perform();
-        }
+//        for(String num:numpad){
+//            touchAction.tap(TapOptions.tapOptions()
+//                    .withElement(ElementOption.element(driver.findElement(By
+//                            .id(num)))))
+//                    .perform();
+        //}
 
 
 
