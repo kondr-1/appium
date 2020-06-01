@@ -18,25 +18,26 @@ public class FuctionalityTest {
         DesiredCapabilities cap = new DesiredCapabilities();
         cap.setCapability(MobileCapabilityType.DEVICE_NAME, "PMP260264902847");
         cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android"); //platformName
-        cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "5.1"); //platformVersion
-        //cap.setCapability(MobileCapabilityType.BROWSER_NAME, ""); //browserName
+        cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "5.1");
+
 
         //C:\Users\<User>>adb shell
         //dumpsys window windows | grep -E 'mCurrentFocus | mFocusedApp'
         //com.android.dialer
         //com.android.dialer/.app.DialtactsActivity
 
-        cap.setCapability("appPackage","com.android.dialer");
-        cap.setCapability("appActivity","com.android.dialer.DialtactsActivity");
+        cap.setCapability("appPackage","ru.mybox.app");
+        cap.setCapability("appActivity","ru.mybox.app.activity.splash.SplashActivity");
+//        cap.setCapability("LoginView","md527c15fe63c6a404a9ef07ba71ddc3460.LoginView");
 
         AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
         TouchAction touchAction = new TouchAction(driver);
 
         //com.android.dialer:id/floating_action_button
-        touchAction.tap(TapOptions.tapOptions()
-                .withElement(ElementOption.element(driver.findElement(By
-                        .id("com.android.dialer:id/floating_action_button")))))
-                .perform();
+//        touchAction.tap(TapOptions.tapOptions() //нажать на элемент (например номер в звонилке)
+//                .withElement(ElementOption.element(driver.findElement(By
+//                        .id("com.android.dialer:id/floating_action_button")))))
+//                .perform();
 //        MobileElement mobileElement = (MobileElement)driver.findElementById("com.android.dialer:id/floating_action_button");
 //        AndroidElement androidElement = (AndroidElement) driver.findElementById("com.android.dialer:id/floating_action_button");
 //        touchAction.tap(TapOptions.tapOptions().withElement(ElementOption.element(androidElement))).perform();
